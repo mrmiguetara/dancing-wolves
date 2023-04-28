@@ -1,6 +1,8 @@
 import numpy as np
+import pandas as pd
 from time import time
 from ortools.linear_solver import pywraplp
+import argparse
 
 def model(c,c_prime, k, r, s, p, I, J, T):
     start_time = time()
@@ -15,7 +17,7 @@ def model(c,c_prime, k, r, s, p, I, J, T):
             y[i,j] = solver.BoolVar(name='y[%i,%i]' % (i,j))
             h[i,j] = solver.BoolVar(name='y[%i,%i]' % (i,j))
 
-    solver.Maximize(solver.Sum([c[i][j]*x[i,j] + c[i][j]*y[i][j] for i in range(I) for j in range(J)]))
+    solver.Maximize(solver.Sum([c[i][j]*x[i,j] + c_prime[i][j]*y[i, j] for i in range(I) for j in range(J)]))
 
     for i in range(I):
         solver.Add(x[i,i] == y[i,i])
@@ -76,14 +78,31 @@ def model(c,c_prime, k, r, s, p, I, J, T):
         print('Solution Infeasible')
 
 def main():
-    c = np.random.randint(0,101, size=(I,J))
-    k = np.random.randint(0,101, size=(I,J))
-    I = 3
-    J = 3
-    T = 3
+    parser: argparse.ArgumentParser = argparse.ArgumentParser(
+        prog='Dancing Wolves',
+        description='You know what this does',
+    )
+    parser.add_argument('-f', '--filename')
+    args = parser.parse_args()
+    filename: str = args.filename
 
-    model(c,k,I,J,T)
+    data = pd.read_excel(filename, sheet_name=['C_dist','C\'_dist', 'r', 's', 'p','k'])
 
+    c = data['C_dist'].to_numpy()
+    c_prime = data['C\'_dist'].to_numpy()
+    r = data['r'].to_numpy()
+    s = data['s'].to_numpy()
+    p = data['p'].to_numpy()
+    k = data['k'].to_numpy()
+    c = c.T
+    I = len(c)
+    k = k.reshape((I,))
+    r = r.reshape((I,))
+    s = s.reshape((I,))
+    J = len(c[0])
+    T = len(p[0])
+    model(c,c_prime, k,r, s, p,I,J,T)
+    # print(I, J, T)
 
 if __name__ == "__main__":
     main()
