@@ -69,11 +69,13 @@ def model(c,c_prime, k, r, s, p, I, J, T):
         print('z = ', solver.Objective().Value())
         for i in range(I):
             for j in range(J):
-                if x[i,j].solution_value() > 0:
-                    print('x(%d,%d) = %.2f' % (i,j,x[i,j].solution_value()) )
-                    print("walltime n milisecs =", solver.WallTime())
-                    print("Model time", time() - start_time, "seconds")
-                    z = solver.Objective().Value()
+                print('x(%d,%d) = %.2f' % (i,j,x[i,j].solution_value()) )
+                print('y(%d,%d) = %.2f' % (i,j,y[i,j].solution_value()) )
+                print('h(%d,%d) = %.2f' % (i,j,h[i,j].solution_value()) )
+                print("walltime n milisecs =", solver.WallTime())
+                print("Model time", time() - start_time, "seconds")
+                z = solver.Objective().Value()
+                print(f'z = {z}')
     if sol == pywraplp.Solver.INFEASIBLE:
         print('Solution Infeasible')
 
