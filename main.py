@@ -15,7 +15,7 @@ def model(c,c_prime, k, r, s, p, I, J, T):
         for j in range(J):
             x[i,j] = solver.BoolVar(name='x[%i,%i]' % (i,j))
             y[i,j] = solver.BoolVar(name='y[%i,%i]' % (i,j))
-            h[i,j] = solver.BoolVar(name='y[%i,%i]' % (i,j))
+            h[i,j] = solver.BoolVar(name='h[%i,%i]' % (i,j))
 
     solver.Maximize(solver.Sum([c[i][j]*x[i,j] + c_prime[i][j]*y[i, j] for i in range(I) for j in range(J)]))
 
@@ -62,7 +62,7 @@ def model(c,c_prime, k, r, s, p, I, J, T):
             solver.Add(h[i,t + 1] <= h[i,t])
     
     for t in range(T):
-        solver.Add(solver.Sum(h[i,t] for i in range(I)) <= p[1][t]) # TODO: confirmar si la variable P es una constante o es un parametro del arreglo p
+        solver.Add(solver.Sum(h[i,t] for i in range(I)) <= 17)
     sol = solver.Solve()
     if sol == pywraplp.Solver.OPTIMAL:
         print('Solution Optimal')
@@ -97,6 +97,7 @@ def main():
     p = data['p'].to_numpy()
     k = data['k'].to_numpy()
     c = c.T
+    c_prime = c_prime.T
     I = len(c)
     k = k.reshape((I,))
     r = r.reshape((I,))
