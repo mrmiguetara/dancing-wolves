@@ -1,5 +1,6 @@
 import argparse
 import pandas as pd
+from time import time
 from pars import PARS
 from ParkingAllocator import ParkingAllocator
 
@@ -24,20 +25,39 @@ def getParameters(filename):
     k = data['k'].to_numpy().reshape((I,))
     return (c, c_prime, k, r, s, I, J)
 
+def solver(model, parkingAllocator):
+  while True:
+    model.solve()
+    carPools = model.get_solution()
+
+    parkingAllocator.addCarPools(carPools)
+    parkingAllocator.assignParkings()
+
+    if parkingAllocator.isOptimal():
+      break
+
+    leftOutCarPools = parkingAllocator.getLeftOutCarPools()
+    for carPool in leftOutCarPools:
+      model.add_constraint(carPool)
+    parkingAllocator.reset()
+
+  return parkingAllocator.getAllocatedCarPools()
+
+
 def main():
   (filename, parking) = parseArguments()
   (c, c_prime, k, r, s, I, J) = getParameters(filename)
 
   model = PARS()
   parkingAllocator = ParkingAllocator(parking)
-
   model.define_model(c, c_prime, k, r, s, I, J)
-  model.solve()
-  carPools = model.get_solution()
+
+  startTime = time()
+  solution = solver(model, parkingAllocator)
+  endTime = time()
+
+  print(f'Model time: {endTime-startTime} seconds')
 
   
-
-  pass
-
 if __name__ == "__main__":
     main()
