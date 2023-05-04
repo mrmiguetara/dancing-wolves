@@ -1,3 +1,5 @@
+from CarPool import CarPool
+
 class ParkingAllocator:
   def __init__(self, num_parkings: int):
     self.parkings = num_parkings
@@ -5,22 +7,22 @@ class ParkingAllocator:
     self.leftOutCarPools = []
     return
 
-  def addCarPools(self, carPools: list):
+  def addCarPools(self, carPools: list[CarPool]):
     self.carPools = carPools.copy()
     return
 
   def assignParkings(self):
-    def departureTime(carPool):
-      return carPool['departure']
+    def departureTime(carPool: CarPool):
+      return carPool.departure
     self.carPools.sort(key=departureTime)
     for _ in range(self.parkings):
       earliestAvailableTime = 0
       i = 0
       for _ in range(len(self.carPools)):
         carPool = self.carPools[i]
-        if carPool['arrival'] > earliestAvailableTime:
+        if carPool.arrival > earliestAvailableTime:
           self.allocatedCarPools.append(carPool)
-          earliestAvailableTime = carPool['departure']
+          earliestAvailableTime = carPool.departure
           self.carPools.pop(i)
           i -= 1
         i += 1
@@ -44,10 +46,10 @@ class ParkingAllocator:
 
 def main():
   carPools = [
-    {'arrival': 1, 'departure': 10},
-    {'arrival': 2, 'departure': 4},
-    {'arrival': 5, 'departure': 9},
-    {'arrival': 3, 'departure': 7},
+    CarPool().addDriver({'arrival': 1, 'departure': 10}),
+    CarPool().addDriver({'arrival': 2, 'departure': 4}),
+    CarPool().addDriver({'arrival': 5, 'departure': 9}),
+    CarPool().addDriver( {'arrival': 3, 'departure': 7}),
   ]
   allocator = ParkingAllocator(2)
   allocator.addCarPools(carPools)
@@ -59,9 +61,9 @@ def main():
   allocator.reset()
 
   carPools = [
-    {'arrival': 1, 'departure': 10},
-    {'arrival': 2, 'departure': 4},
-    {'arrival': 5, 'departure': 9},
+    CarPool().addDriver({'arrival': 1, 'departure': 10}),
+    CarPool().addDriver({'arrival': 2, 'departure': 4}),
+    CarPool().addDriver({'arrival': 5, 'departure': 9}),
   ]
   allocator = ParkingAllocator(2)
   allocator.addCarPools(carPools)
