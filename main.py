@@ -1,120 +1,63 @@
-import numpy as np
+import argparse
 import pandas as pd
 from time import time
-from ortools.linear_solver import pywraplp
-import argparse
+from pars import PARS
+from ParkingAllocator import ParkingAllocator
 
-def model(c,c_prime, k, r, s, p, I, J, T):
-    start_time = time()
+def parseArguments():
+  parser: argparse.ArgumentParser = argparse.ArgumentParser(
+    prog='Dancing Wolves',
+    description='You know what this does',
+  )
+  parser.add_argument('-f', '--filename')
+  parser.add_argument('-p', '--parkings')
+  args = parser.parse_args()
+  return (args.filename, args.parking)
 
-    solver = pywraplp.Solver('LAP', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
-    x = {}
-    y = {}
-    h = {}
-    for i in range(I):
-        for j in range(J):
-            x[i,j] = solver.BoolVar(name='x[%i,%i]' % (i,j))
-            y[i,j] = solver.BoolVar(name='y[%i,%i]' % (i,j))
-            h[i,j] = solver.BoolVar(name='h[%i,%i]' % (i,j))
+def getParameters(filename):
+    data = pd.read_excel(filename, sheet_name=['C_dist','C\'_dist', 'r', 's', 'p','k'])
+    c = data['C_dist'].to_numpy().T
+    c_prime = data['C\'_dist'].to_numpy().T
+    I = len(c)
+    J = len(c[0])
+    r = data['r'].to_numpy().reshape((I,))
+    s = data['s'].to_numpy().reshape((I,))
+    k = data['k'].to_numpy().reshape((I,))
+    return (c, c_prime, k, r, s, I, J)
 
-    solver.Maximize(solver.Sum([c[i][j]*x[i,j] + c_prime[i][j]*y[i, j] for i in range(I) for j in range(J)]))
+def solver(model, parkingAllocator):
+  while True:
+    model.solve()
+    carPools = model.get_solution()
 
-    for i in range(I):
-        solver.Add(x[i,i] == y[i,i])
-    
-    for j in range(J):
-        solver.Add(solver.Sum([x[i,j] for i in range(I)]) <= 1)
-    
-    for i in range(I):
-        solver.Add(solver.Sum([x[i,j] for j in range(J)]) <= k[i]*y[i,i])
-    
-    for j in range(J):
-        solver.Add(solver.Sum([y[i,j] for i in range(I)]) <= 1)
-    
-    for i in range(I):
-        solver.Add(solver.Sum([y[i,j] for j in range(J)]) <= k[i]*y[i,i])
-    for i in range(I):
-        solver.Add(solver.Sum([y[i,j] for j in range(J)]) <= k[i]*y[i,i])
-    for i in range(I):
-        solver.Add(solver.Sum([y[i,j] for j in range(J)]) <= k[i]*y[i,i])
+    parkingAllocator.addCarPools(carPools)
+    parkingAllocator.assignParkings()
 
-    for i in range(I):
-        for j in range(J):
-            if i != j:
-                for t in range(T):
-                    if t < r[i]:
-                        solver.Add(p[j][t] * x[i,j] <= h[i,t])
-    for i in range(I):
-        for t in range(T):
-            if r[i] < t and t > s[i]:
-                solver.Add(p[i][t] * x[i,i] == h[i,t])
-    for i in range(I):
-        for j in range(J):
-            if i != j:
-                for t in range(T):
-                    if t > s[i]:
-                        solver.Add(p[j][t] * y[i,j] <= h[i,t])
-    for i in range(I):
-        for t in range(r[i]-1):
-            solver.Add(h[i,t] <= h[i,t + 1])
-    for i in range(I):
-        for t in range(s[i], T-1):
-            solver.Add(h[i,t + 1] <= h[i,t])
-    
-    for t in range(T):
-        solver.Add(solver.Sum(h[i,t] for i in range(I)) <= 17)
-    sol = solver.Solve()
-    if sol == pywraplp.Solver.OPTIMAL:
-        print('Solution Optimal')
-        print('z = ', solver.Objective().Value())
-        for i in range(I):
-            for j in range(J):
-                print('x(%d,%d) = %.2f' % (i,j,x[i,j].solution_value()) )
-                print('y(%d,%d) = %.2f' % (i,j,y[i,j].solution_value()) )
-                print('h(%d,%d) = %.2f' % (i,j,h[i,j].solution_value()) )
-                print("walltime n milisecs =", solver.WallTime())
-                print("Model time", time() - start_time, "seconds")
-                z = solver.Objective().Value()
-                print(f'z = {z}')
-    if sol == pywraplp.Solver.INFEASIBLE:
-        print('Solution Infeasible')
-    for i in range(I):
-        for j in range(J):
-            if x[i,j].solution_value() == 1.0:
-                print(f'X -> {i}, {j}: {x[i,j].solution_value()}')
-            
-    for i in range(I):
-        for j in range(J):
-            if y[i,j].solution_value() == 1.0:
-                print(f'Y -> {i}, {j}: {y[i,j].solution_value()}')
+    if parkingAllocator.isOptimal():
+      break
+
+    leftOutCarPools = parkingAllocator.getLeftOutCarPools()
+    for carPool in leftOutCarPools:
+      model.add_constraint(carPool)
+    parkingAllocator.reset()
+
+  return parkingAllocator.getAllocatedCarPools()
+
 
 def main():
-    parser: argparse.ArgumentParser = argparse.ArgumentParser(
-        prog='Dancing Wolves',
-        description='You know what this does',
-    )
-    parser.add_argument('-f', '--filename')
-    args = parser.parse_args()
-    filename: str = args.filename
+  (filename, parking) = parseArguments()
+  (c, c_prime, k, r, s, I, J) = getParameters(filename)
 
-    data = pd.read_excel(filename, sheet_name=['C_dist','C\'_dist', 'r', 's', 'p','k'])
+  model = PARS()
+  parkingAllocator = ParkingAllocator(parking)
+  model.define_model(c, c_prime, k, r, s, I, J)
 
-    c = data['C_dist'].to_numpy()
-    c_prime = data['C\'_dist'].to_numpy()
-    r = data['r'].to_numpy()
-    s = data['s'].to_numpy()
-    p = data['p'].to_numpy()
-    k = data['k'].to_numpy()
-    c = c.T
-    c_prime = c_prime.T
-    I = len(c)
-    k = k.reshape((I,))
-    r = r.reshape((I,))
-    s = s.reshape((I,))
-    J = len(c[0])
-    T = len(p[0])
-    model(c,c_prime, k,r, s, p,I,J,T)
-    # print(I, J, T)
+  startTime = time()
+  solution = solver(model, parkingAllocator)
+  endTime = time()
 
+  print(f'Model time: {endTime-startTime} seconds')
+
+  
 if __name__ == "__main__":
     main()
