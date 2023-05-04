@@ -21,7 +21,7 @@ class PARS(object):
 
 
 
-    def define_model(self, c,c_prime, k, r, s, p, I, J, T):
+    def define_model(self, c,c_prime, k, r, s, I, J):
 
         solver = pywraplp.Solver('LAP', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
         x = {}
@@ -86,33 +86,3 @@ class PARS(object):
 
     def get_solution():
         pass
-def main():
-    parser: argparse.ArgumentParser = argparse.ArgumentParser(
-        prog='Dancing Wolves',
-        description='You know what this does',
-    )
-    parser.add_argument('-f', '--filename')
-    args = parser.parse_args()
-    filename: str = args.filename
-
-    data = pd.read_excel(filename, sheet_name=['C_dist','C\'_dist', 'r', 's', 'p','k'])
-
-    c = data['C_dist'].to_numpy()
-    c_prime = data['C\'_dist'].to_numpy()
-    r = data['r'].to_numpy()
-    s = data['s'].to_numpy()
-    p = data['p'].to_numpy()
-    k = data['k'].to_numpy()
-    c = c.T
-    c_prime = c_prime.T
-    I = len(c)
-    J = len(c[0])
-    T = len(p[0])
-    k = k.reshape((I,))
-    r = r.reshape((I,))
-    s = s.reshape((I,))
-    # model(c,c_prime, k,r, s, p,I,J,T)
-    # print(I, J, T)
-
-if __name__ == "__main__":
-    main()
