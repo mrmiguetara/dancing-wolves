@@ -7,7 +7,12 @@ class CarPool:
     return
   
   def __str__(self):
-    return f'Arrival: {self.arrival}, Departure: {self.departure}'
+    return f'''
+    Arrival: {self.arrival}, Departure: {self.departure}
+    Carpool Driver: {self.driver}
+    Carpool Riders Departure: {self.ridersDeparture}
+    Carpool Riders Return: {self.ridersReturn}
+    '''
   
   def addDriver(self, driver):
     self.driver = driver
@@ -36,9 +41,6 @@ def main():
   carPool.addRiderReturn({ 'arrival': 3, 'departure': 5 })
 
   print(carPool)
-  print(f"Carpool Driver: {carPool.driver}")
-  print(f"Carpool Riders Departure: {carPool.ridersDeparture}")
-  print(f"Carpool Riders Return: {carPool.ridersReturn}")
   return
 
 if __name__ == "__main__":
