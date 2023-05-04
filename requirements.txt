@@ -1,5 +1,12 @@
 absl-py==1.4.0
+et-xmlfile==1.1.0
 numpy==1.24.3
+openpyxl==3.1.2
 ortools==9.6.2534
+pandas==2.0.1
 protobuf==4.22.3
+python-dateutil==2.8.2
+pytz==2023.3
 scipy==1.10.1
+six==1.16.0
+tzdata==2023.3
