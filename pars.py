@@ -32,33 +32,33 @@ class PARS(object):
         self.earliest_departure = s[:]
 
         solver = pywraplp.Solver('PARS', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
-        x = {}
-        y = {}
+        self.x = {}
+        self.y = {}
         for i in range(self.I):
             for j in range(self.J):
-                x[i,j] = solver.BoolVar(name='x[%i,%i]' % (i,j))
-                y[i,j] = solver.BoolVar(name='y[%i,%i]' % (i,j))
+                self.x[i,j] = solver.BoolVar(name='x[%i,%i]' % (i,j))
+                self.y[i,j] = solver.BoolVar(name='y[%i,%i]' % (i,j))
 
-        solver.Maximize(solver.Sum([c[i][j]*x[i,j] + c_prime[i][j]*y[i, j] for i in range(self.I) for j in range(self.J)]))
+        solver.Maximize(solver.Sum([c[i][j]*self.x[i,j] + c_prime[i][j]*self.y[i, j] for i in range(self.I) for j in range(self.J)]))
 
         for i in range(self.I):
-            solver.Add(x[i,i] == y[i,i])
+            solver.Add(self.x[i,i] == self.y[i,i])
         
         for j in range(self.J):
-            solver.Add(solver.Sum([x[i,j] for i in range(self.I)]) <= 1)
+            solver.Add(solver.Sum([self.x[i,j] for i in range(self.I)]) <= 1)
         
         for i in range(self.I):
-            solver.Add(solver.Sum([x[i,j] for j in range(self.J)]) <= k[i]*y[i,i])
+            solver.Add(solver.Sum([self.x[i,j] for j in range(self.J)]) <= k[i]*self.y[i,i])
         
         for j in range(self.J):
-            solver.Add(solver.Sum([y[i,j] for i in range(self.I)]) <= 1)
+            solver.Add(solver.Sum([self.y[i,j] for i in range(self.I)]) <= 1)
         
         for i in range(self.I):
-            solver.Add(solver.Sum([y[i,j] for j in range(self.J)]) <= k[i]*y[i,i])
+            solver.Add(solver.Sum([self.y[i,j] for j in range(self.J)]) <= k[i]*self.y[i,i])
         for i in range(self.I):
-            solver.Add(solver.Sum([y[i,j] for j in range(self.J)]) <= k[i]*y[i,i])
+            solver.Add(solver.Sum([self.y[i,j] for j in range(self.J)]) <= k[i]*self.y[i,i])
         for i in range(self.I):
-            solver.Add(solver.Sum([y[i,j] for j in range(self.J)]) <= k[i]*y[i,i])
+            solver.Add(solver.Sum([self.y[i,j] for j in range(self.J)]) <= k[i]*self.y[i,i])
         self.solver = solver
 
     def solve(self):
@@ -66,6 +66,7 @@ class PARS(object):
         self.solution = sol
         return
     def add_constraint(self, constraint: CarPool) -> None:
+        print(f'Add constraint: {constraint}')
         self.solver.Add(self.solver.Sum(self.x[constraint.driver['id'], j['id']] for j in constraint.ridersDeparture) <= len(constraint.ridersDeparture))
 
     def get_solution(self) -> list[CarPool]:
