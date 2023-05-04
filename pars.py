@@ -39,7 +39,7 @@ class PARS(object):
                 x[i,j] = solver.BoolVar(name='x[%i,%i]' % (i,j))
                 y[i,j] = solver.BoolVar(name='y[%i,%i]' % (i,j))
 
-        solver.Maximize(solver.Sum([c[i][j]*x[i,j] + c_prime[i][j]*y[i, j] for i in range(I) for j in range(self.J)]))
+        solver.Maximize(solver.Sum([c[i][j]*x[i,j] + c_prime[i][j]*y[i, j] for i in range(self.I) for j in range(self.J)]))
 
         for i in range(self.I):
             solver.Add(x[i,i] == y[i,i])
