@@ -36,7 +36,6 @@ def solver(model: PARS, parkingAllocator: ParkingAllocator):
       break
 
     leftOutCarPools = parkingAllocator.getLeftOutCarPools()
-    print(f'New constraints: {len(leftOutCarPools)}')
     for carPool in leftOutCarPools:
       model.add_constraint(carPool)
     parkingAllocator.reset()
@@ -56,6 +55,8 @@ def main():
   endTime = time()
 
   print(f'Model time: {endTime-startTime} seconds')
+  for carPools in solution:
+    print(carPools)
 
 if __name__ == "__main__":
     main()
