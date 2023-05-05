@@ -4,7 +4,7 @@ from time import time
 from ortools.linear_solver import pywraplp
 import argparse
 
-def model(c,c_prime, k, r, s, p, I, J, T):
+def model(c,c_prime, k, r, s, p, I, J, T, parkings):
 
     solver = pywraplp.Solver('LAP', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
     x = {}
@@ -61,22 +61,22 @@ def model(c,c_prime, k, r, s, p, I, J, T):
             solver.Add(h[i,t + 1] <= h[i,t])
     
     for t in range(T):
-        solver.Add(solver.Sum(h[i,t] for i in range(I)) <= 17)
+        solver.Add(solver.Sum(h[i,t] for i in range(I)) <= parkings)
     start_time = time()
     sol = solver.Solve()
     end_time = time()
     if sol == pywraplp.Solver.OPTIMAL:
-        print('Solution Optimal')
-        print('z = ', solver.Objective().Value())
-        for i in range(I):
-            for j in range(J):
-                print('x(%d,%d) = %.2f' % (i,j,x[i,j].solution_value()) )
-                print('y(%d,%d) = %.2f' % (i,j,y[i,j].solution_value()) )
-                print('h(%d,%d) = %.2f' % (i,j,h[i,j].solution_value()) )
-                print("walltime n milisecs =", solver.WallTime())
-                print("Model time", end_time - start_time, "seconds")
-                z = solver.Objective().Value()
-                print(f'z = {z}')
+        # print('Solution Optimal')
+        # print('z = ', solver.Objective().Value())
+        # for i in range(I):
+        #     for j in range(J):
+        #         print('x(%d,%d) = %.2f' % (i,j,x[i,j].solution_value()) )
+        #         print('y(%d,%d) = %.2f' % (i,j,y[i,j].solution_value()) )
+        #         print('h(%d,%d) = %.2f' % (i,j,h[i,j].solution_value()) )
+        #         print("walltime n milisecs =", solver.WallTime())
+        #         z = solver.Objective().Value()
+        #         print(f'z = {z}')
+        print("Model time", end_time - start_time, "seconds")
     if sol == pywraplp.Solver.INFEASIBLE:
         print('Solution Infeasible')
 
@@ -86,8 +86,10 @@ def main():
         description='You know what this does',
     )
     parser.add_argument('-f', '--filename')
+    parser.add_argument('-p', '--parkings')
     args = parser.parse_args()
     filename: str = args.filename
+    parkings = int(args.parkings)
 
     data = pd.read_excel(filename, sheet_name=['C_dist','C\'_dist', 'r', 's', 'p','k'])
 
@@ -105,7 +107,7 @@ def main():
     s = s.reshape((I,))
     J = len(c[0])
     T = len(p[0])
-    model(c,c_prime, k,r, s, p,I,J,T)
+    model(c,c_prime, k,r, s, p,I,J,T, parkings)
     # print(I, J, T)
 
 if __name__ == "__main__":

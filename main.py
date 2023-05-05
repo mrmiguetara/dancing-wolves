@@ -55,8 +55,8 @@ def main():
   endTime = time()
 
   print(f'Model time: {endTime-startTime} seconds')
-  for carPools in solution:
-    print(carPools)
+  # for carPools in solution:
+  #   print(carPools)
 
 if __name__ == "__main__":
     main()
