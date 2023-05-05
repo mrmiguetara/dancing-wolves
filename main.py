@@ -14,7 +14,7 @@ def parseArguments():
   args = parser.parse_args()
   return (args.filename, int(args.parkings))
 
-def getParameters(filename):
+def getParameters(filename: str):
     data = pd.read_excel(filename, sheet_name=['C_dist','C\'_dist', 'r', 's', 'p','k'])
     c = data['C_dist'].to_numpy().T
     c_prime = data['C\'_dist'].to_numpy().T
@@ -24,7 +24,7 @@ def getParameters(filename):
     k = data['k'].to_numpy().reshape((I,))
     return (c, c_prime, k, r, s)
 
-def solver(model, parkingAllocator):
+def solver(model: PARS, parkingAllocator: ParkingAllocator):
   while True:
     model.solve()
     carPools = model.get_solution()
@@ -36,6 +36,7 @@ def solver(model, parkingAllocator):
       break
 
     leftOutCarPools = parkingAllocator.getLeftOutCarPools()
+    print(f'New constraints: {len(leftOutCarPools)}')
     for carPool in leftOutCarPools:
       model.add_constraint(carPool)
     parkingAllocator.reset()

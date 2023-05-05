@@ -5,7 +5,7 @@ from ortools.linear_solver import pywraplp
 import argparse
 from CarPool import CarPool
 
-class SolutionNotcalculatedError(Exception):
+class SolutionNotCalculatedError(Exception):
     pass
 
 class PARS(object):
@@ -65,13 +65,13 @@ class PARS(object):
         sol = self.solver.Solve()
         self.solution = sol
         return
+
     def add_constraint(self, constraint: CarPool) -> None:
-        print(f'Add constraint: {constraint}')
-        self.solver.Add(self.solver.Sum(self.x[constraint.driver['id'], j['id']] for j in constraint.ridersDeparture) <= len(constraint.ridersDeparture))
+        self.solver.Add(self.solver.Sum(self.x[constraint.driver['id'], j['id']] for j in constraint.ridersDeparture) <= len(constraint.ridersDeparture)-1)
 
     def get_solution(self) -> list[CarPool]:
         if self.solution is None:
-            raise SolutionNotcalculatedError('The solution has not been calculated yet')
+            raise SolutionNotCalculatedError('The solution has not been calculated yet')
         car_pools = []
         x_sol = [[i,j] for i in range(self.I) for j in range(self.J) if self.x[i,j].solution_value() == 1.0]
         y_sol = [[i,j] for i in range(self.I) for j in range(self.J) if self.y[i,j].solution_value() == 1.0]
