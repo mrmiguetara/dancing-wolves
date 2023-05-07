@@ -16,24 +16,20 @@ def model(c,c_prime, k, r, s, p, I, J, T, parkings):
             y[i,j] = solver.BoolVar(name='y[%i,%i]' % (i,j))
             h[i,j] = solver.BoolVar(name='h[%i,%i]' % (i,j))
 
-    solver.Maximize(solver.Sum([c[i][j]*x[i,j] + c_prime[i][j]*y[i, j] for i in range(I) for j in range(J)]))
+    solver.Minimize(solver.Sum([c[i][j]*x[i,j] + c_prime[i][j]*y[i, j] for i in range(I) for j in range(J)]))
 
     for i in range(I):
         solver.Add(x[i,i] == y[i,i])
     
     for j in range(J):
-        solver.Add(solver.Sum([x[i,j] for i in range(I)]) <= 1)
+        solver.Add(solver.Sum([x[i,j] for i in range(I)]) == 1)
     
     for i in range(I):
-        solver.Add(solver.Sum([x[i,j] for j in range(J)]) <= k[i]*y[i,i])
+        solver.Add(solver.Sum([x[i,j] for j in range(J)]) <= k[i]*x[i,i])
     
     for j in range(J):
-        solver.Add(solver.Sum([y[i,j] for i in range(I)]) <= 1)
+        solver.Add(solver.Sum([y[i,j] for i in range(I)]) == 1)
     
-    for i in range(I):
-        solver.Add(solver.Sum([y[i,j] for j in range(J)]) <= k[i]*y[i,i])
-    for i in range(I):
-        solver.Add(solver.Sum([y[i,j] for j in range(J)]) <= k[i]*y[i,i])
     for i in range(I):
         solver.Add(solver.Sum([y[i,j] for j in range(J)]) <= k[i]*y[i,i])
 
@@ -66,17 +62,17 @@ def model(c,c_prime, k, r, s, p, I, J, T, parkings):
     sol = solver.Solve()
     end_time = time()
     if sol == pywraplp.Solver.OPTIMAL:
-        # print('Solution Optimal')
-        # print('z = ', solver.Objective().Value())
-        # for i in range(I):
-        #     for j in range(J):
-        #         print('x(%d,%d) = %.2f' % (i,j,x[i,j].solution_value()) )
-        #         print('y(%d,%d) = %.2f' % (i,j,y[i,j].solution_value()) )
-        #         print('h(%d,%d) = %.2f' % (i,j,h[i,j].solution_value()) )
-        #         print("walltime n milisecs =", solver.WallTime())
-        #         z = solver.Objective().Value()
-        #         print(f'z = {z}')
+        print('Solution Optimal')
+        print('z = ', solver.Objective().Value())
         print("Model time", end_time - start_time, "seconds")
+        for i in range(I):
+            for j in range(J):
+                if x[i,j].solution_value() == 1: 
+                    print('x(%d,%d) = %.2f' % (i,j,x[i,j].solution_value()) )
+                if y[i,j].solution_value() == 1: 
+                    print('y(%d,%d) = %.2f' % (i,j,y[i,j].solution_value()) )
+                # print('h(%d,%d) = %.2f' % (i,j,h[i,j].solution_value()) )
+                # print("walltime n milisecs =", solver.WallTime())
     if sol == pywraplp.Solver.INFEASIBLE:
         print('Solution Infeasible')
 
@@ -91,7 +87,7 @@ def main():
     filename: str = args.filename
     parkings = int(args.parkings)
 
-    data = pd.read_excel(filename, sheet_name=['C_dist','C\'_dist', 'r', 's', 'p','k'])
+    data = pd.read_excel(filename, sheet_name=['C_dist','C\'_dist', 'r', 's', 'p','k'], header=None)
 
     c = data['C_dist'].to_numpy()
     c_prime = data['C\'_dist'].to_numpy()

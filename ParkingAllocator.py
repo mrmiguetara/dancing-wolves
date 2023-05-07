@@ -30,13 +30,13 @@ class ParkingAllocator:
     for leftOut in self.carPools:
       self.leftOutCarPools.append(leftOut)
 
-  def isOptimal(self):
+  def isOptimal(self) -> bool:
     return len(self.leftOutCarPools) == 0
 
-  def getAllocatedCarPools(self):
+  def getAllocatedCarPools(self) -> list[CarPool]:
     return self.allocatedCarPools
 
-  def getLeftOutCarPools(self):
+  def getLeftOutCarPools(self) -> list[CarPool]:
     return self.leftOutCarPools
 
   def reset(self):
@@ -49,7 +49,7 @@ def main():
     CarPool().addDriver({'arrival': 1, 'departure': 10}),
     CarPool().addDriver({'arrival': 2, 'departure': 4}),
     CarPool().addDriver({'arrival': 5, 'departure': 9}),
-    CarPool().addDriver( {'arrival': 3, 'departure': 7}),
+    CarPool().addDriver({'arrival': 3, 'departure': 7}),
   ]
   allocator = ParkingAllocator(2)
   allocator.addCarPools(carPools)
@@ -71,7 +71,7 @@ def main():
   print("Parking spots: 2")
   print("Is optimal: ", allocator.isOptimal())
   print("Allocated: ", allocator.getAllocatedCarPools())
-  print("Left out:", allocator.getLeftOutCarPools())
+  print("Left out: ", allocator.getLeftOutCarPools())
   allocator.reset()
 
 if __name__ == "__main__":
