@@ -1,0 +1,650 @@
+Z = 8510.000000000002
+Model time: 10.15397596359253 seconds
+
+    Arrival: 0, Departure: 17
+    Carpool Driver: {'id': 0, 'arrival': 0, 'departure': 17}
+    Carpool Riders Departure: [{'id': 0, 'arrival': 0, 'departure': 17}]
+    Carpool Riders Return: [{'id': 0, 'arrival': 0, 'departure': 17}]
+    
+
+    Arrival: 4, Departure: 8
+    Carpool Driver: {'id': 1, 'arrival': 4, 'departure': 6}
+    Carpool Riders Departure: [{'id': 1, 'arrival': 4, 'departure': 6}, {'id': 75, 'arrival': 4, 'departure': 5}, {'id': 109, 'arrival': 4, 'departure': 8}, {'id': 232, 'arrival': 4, 'departure': 8}]
+    Carpool Riders Return: [{'id': 1, 'arrival': 4, 'departure': 6}, {'id': 75, 'arrival': 4, 'departure': 5}, {'id': 109, 'arrival': 4, 'departure': 8}, {'id': 232, 'arrival': 4, 'departure': 8}]
+    
+
+    Arrival: 5, Departure: 14
+    Carpool Driver: {'id': 5, 'arrival': 5, 'departure': 6}
+    Carpool Riders Departure: [{'id': 5, 'arrival': 5, 'departure': 6}, {'id': 126, 'arrival': 8, 'departure': 14}]
+    Carpool Riders Return: [{'id': 5, 'arrival': 5, 'departure': 6}, {'id': 126, 'arrival': 8, 'departure': 14}]
+    
+
+    Arrival: 10, Departure: 14
+    Carpool Driver: {'id': 6, 'arrival': 10, 'departure': 13}
+    Carpool Riders Departure: [{'id': 6, 'arrival': 10, 'departure': 13}, {'id': 139, 'arrival': 10, 'departure': 14}]
+    Carpool Riders Return: [{'id': 6, 'arrival': 10, 'departure': 13}, {'id': 139, 'arrival': 10, 'departure': 14}]
+    
+
+    Arrival: 5, Departure: 7
+    Carpool Driver: {'id': 7, 'arrival': 5, 'departure': 6}
+    Carpool Riders Departure: [{'id': 7, 'arrival': 5, 'departure': 6}, {'id': 147, 'arrival': 6, 'departure': 7}]
+    Carpool Riders Return: [{'id': 7, 'arrival': 5, 'departure': 6}, {'id': 147, 'arrival': 6, 'departure': 7}]
+    
+
+    Arrival: 1, Departure: 5
+    Carpool Driver: {'id': 10, 'arrival': 1, 'departure': 3}
+    Carpool Riders Departure: [{'id': 10, 'arrival': 1, 'departure': 3}, {'id': 242, 'arrival': 1, 'departure': 5}]
+    Carpool Riders Return: [{'id': 10, 'arrival': 1, 'departure': 3}, {'id': 242, 'arrival': 1, 'departure': 5}]
+    
+
+    Arrival: 8, Departure: 9
+    Carpool Driver: {'id': 11, 'arrival': 8, 'departure': 9}
+    Carpool Riders Departure: [{'id': 11, 'arrival': 8, 'departure': 9}, {'id': 163, 'arrival': 8, 'departure': 9}]
+    Carpool Riders Return: [{'id': 11, 'arrival': 8, 'departure': 9}, {'id': 163, 'arrival': 8, 'departure': 9}]
+    
+
+    Arrival: 7, Departure: 11
+    Carpool Driver: {'id': 12, 'arrival': 7, 'departure': 11}
+    Carpool Riders Departure: [{'id': 12, 'arrival': 7, 'departure': 11}]
+    Carpool Riders Return: [{'id': 12, 'arrival': 7, 'departure': 11}, {'id': 194, 'arrival': 7, 'departure': 8}]
+    
+
+    Arrival: 12, Departure: 14
+    Carpool Driver: {'id': 14, 'arrival': 12, 'departure': 14}
+    Carpool Riders Departure: [{'id': 14, 'arrival': 12, 'departure': 14}, {'id': 82, 'arrival': 12, 'departure': 14}]
+    Carpool Riders Return: [{'id': 14, 'arrival': 12, 'departure': 14}, {'id': 82, 'arrival': 12, 'departure': 14}]
+    
+
+    Arrival: 1, Departure: 12
+    Carpool Driver: {'id': 15, 'arrival': 1, 'departure': 4}
+    Carpool Riders Departure: [{'id': 15, 'arrival': 1, 'departure': 4}, {'id': 98, 'arrival': 6, 'departure': 12}]
+    Carpool Riders Return: [{'id': 15, 'arrival': 1, 'departure': 4}, {'id': 98, 'arrival': 6, 'departure': 12}]
+    
+
+    Arrival: 12, Departure: 17
+    Carpool Driver: {'id': 16, 'arrival': 12, 'departure': 17}
+    Carpool Riders Departure: [{'id': 16, 'arrival': 12, 'departure': 17}]
+    Carpool Riders Return: [{'id': 16, 'arrival': 12, 'departure': 17}]
+    
+
+    Arrival: 9, Departure: 14
+    Carpool Driver: {'id': 17, 'arrival': 9, 'departure': 14}
+    Carpool Riders Departure: [{'id': 2, 'arrival': 9, 'departure': 10}, {'id': 17, 'arrival': 9, 'departure': 14}]
+    Carpool Riders Return: [{'id': 2, 'arrival': 9, 'departure': 10}, {'id': 17, 'arrival': 9, 'departure': 14}]
+    
+
+    Arrival: 4, Departure: 5
+    Carpool Driver: {'id': 18, 'arrival': 4, 'departure': 5}
+    Carpool Riders Departure: [{'id': 18, 'arrival': 4, 'departure': 5}, {'id': 205, 'arrival': 4, 'departure': 5}]
+    Carpool Riders Return: [{'id': 18, 'arrival': 4, 'departure': 5}, {'id': 205, 'arrival': 4, 'departure': 5}]
+    
+
+    Arrival: 9, Departure: 13
+    Carpool Driver: {'id': 19, 'arrival': 9, 'departure': 10}
+    Carpool Riders Departure: [{'id': 19, 'arrival': 9, 'departure': 10}, {'id': 249, 'arrival': 9, 'departure': 13}]
+    Carpool Riders Return: [{'id': 19, 'arrival': 9, 'departure': 10}, {'id': 249, 'arrival': 9, 'departure': 13}]
+    
+
+    Arrival: 6, Departure: 13
+    Carpool Driver: {'id': 20, 'arrival': 7, 'departure': 10}
+    Carpool Riders Departure: [{'id': 20, 'arrival': 7, 'departure': 10}, {'id': 115, 'arrival': 6, 'departure': 7}, {'id': 207, 'arrival': 8, 'departure': 13}]
+    Carpool Riders Return: [{'id': 20, 'arrival': 7, 'departure': 10}, {'id': 115, 'arrival': 6, 'departure': 7}, {'id': 207, 'arrival': 8, 'departure': 13}]
+    
+
+    Arrival: 5, Departure: 10
+    Carpool Driver: {'id': 21, 'arrival': 5, 'departure': 9}
+    Carpool Riders Departure: [{'id': 21, 'arrival': 5, 'departure': 9}, {'id': 245, 'arrival': 5, 'departure': 10}]
+    Carpool Riders Return: [{'id': 21, 'arrival': 5, 'departure': 9}, {'id': 245, 'arrival': 5, 'departure': 10}]
+    
+
+    Arrival: 9, Departure: 14
+    Carpool Driver: {'id': 24, 'arrival': 9, 'departure': 10}
+    Carpool Riders Departure: [{'id': 4, 'arrival': 9, 'departure': 14}, {'id': 24, 'arrival': 9, 'departure': 10}, {'id': 182, 'arrival': 9, 'departure': 11}]
+    Carpool Riders Return: [{'id': 4, 'arrival': 9, 'departure': 14}, {'id': 24, 'arrival': 9, 'departure': 10}, {'id': 182, 'arrival': 9, 'departure': 11}]
+    
+
+    Arrival: 3, Departure: 8
+    Carpool Driver: {'id': 25, 'arrival': 3, 'departure': 5}
+    Carpool Riders Departure: [{'id': 25, 'arrival': 3, 'departure': 5}, {'id': 91, 'arrival': 3, 'departure': 8}]
+    Carpool Riders Return: [{'id': 25, 'arrival': 3, 'departure': 5}, {'id': 91, 'arrival': 3, 'departure': 8}]
+    
+
+    Arrival: 4, Departure: 11
+    Carpool Driver: {'id': 26, 'arrival': 4, 'departure': 6}
+    Carpool Riders Departure: [{'id': 26, 'arrival': 4, 'departure': 6}, {'id': 105, 'arrival': 4, 'departure': 11}, {'id': 164, 'arrival': 4, 'departure': 7}]
+    Carpool Riders Return: [{'id': 26, 'arrival': 4, 'departure': 6}, {'id': 105, 'arrival': 4, 'departure': 11}, {'id': 160, 'arrival': 4, 'departure': 10}]
+    
+
+    Arrival: 1, Departure: 3
+    Carpool Driver: {'id': 27, 'arrival': 1, 'departure': 3}
+    Carpool Riders Departure: [{'id': 27, 'arrival': 1, 'departure': 3}]
+    Carpool Riders Return: [{'id': 27, 'arrival': 1, 'departure': 3}]
+    
+
+    Arrival: 7, Departure: 11
+    Carpool Driver: {'id': 28, 'arrival': 7, 'departure': 10}
+    Carpool Riders Departure: [{'id': 28, 'arrival': 7, 'departure': 10}, {'id': 57, 'arrival': 7, 'departure': 11}, {'id': 213, 'arrival': 7, 'departure': 8}]
+    Carpool Riders Return: [{'id': 28, 'arrival': 7, 'departure': 10}, {'id': 57, 'arrival': 7, 'departure': 11}, {'id': 213, 'arrival': 7, 'departure': 8}]
+    
+
+    Arrival: 8, Departure: 12
+    Carpool Driver: {'id': 29, 'arrival': 8, 'departure': 12}
+    Carpool Riders Departure: [{'id': 29, 'arrival': 8, 'departure': 12}, {'id': 188, 'arrival': 8, 'departure': 9}, {'id': 216, 'arrival': 8, 'departure': 9}]
+    Carpool Riders Return: [{'id': 29, 'arrival': 8, 'departure': 12}, {'id': 188, 'arrival': 8, 'departure': 9}, {'id': 216, 'arrival': 8, 'departure': 9}]
+    
+
+    Arrival: 8, Departure: 9
+    Carpool Driver: {'id': 30, 'arrival': 8, 'departure': 9}
+    Carpool Riders Departure: [{'id': 23, 'arrival': 8, 'departure': 9}, {'id': 30, 'arrival': 8, 'departure': 9}, {'id': 43, 'arrival': 8, 'departure': 9}, {'id': 135, 'arrival': 8, 'departure': 9}]
+    Carpool Riders Return: [{'id': 23, 'arrival': 8, 'departure': 9}, {'id': 30, 'arrival': 8, 'departure': 9}, {'id': 43, 'arrival': 8, 'departure': 9}, {'id': 135, 'arrival': 8, 'departure': 9}]
+    
+
+    Arrival: 7, Departure: 11
+    Carpool Driver: {'id': 31, 'arrival': 7, 'departure': 11}
+    Carpool Riders Departure: [{'id': 31, 'arrival': 7, 'departure': 11}, {'id': 179, 'arrival': 7, 'departure': 8}, {'id': 198, 'arrival': 7, 'departure': 10}]
+    Carpool Riders Return: [{'id': 31, 'arrival': 7, 'departure': 11}, {'id': 179, 'arrival': 7, 'departure': 8}, {'id': 198, 'arrival': 7, 'departure': 10}]
+    
+
+    Arrival: 2, Departure: 12
+    Carpool Driver: {'id': 32, 'arrival': 2, 'departure': 5}
+    Carpool Riders Departure: [{'id': 32, 'arrival': 2, 'departure': 5}, {'id': 166, 'arrival': 6, 'departure': 10}, {'id': 248, 'arrival': 2, 'departure': 3}]
+    Carpool Riders Return: [{'id': 32, 'arrival': 2, 'departure': 5}, {'id': 175, 'arrival': 6, 'departure': 12}, {'id': 248, 'arrival': 2, 'departure': 3}]
+    
+
+    Arrival: 5, Departure: 14
+    Carpool Driver: {'id': 33, 'arrival': 5, 'departure': 8}
+    Carpool Riders Departure: [{'id': 33, 'arrival': 5, 'departure': 8}, {'id': 121, 'arrival': 8, 'departure': 14}, {'id': 219, 'arrival': 5, 'departure': 7}, {'id': 230, 'arrival': 5, 'departure': 9}]
+    Carpool Riders Return: [{'id': 33, 'arrival': 5, 'departure': 8}, {'id': 121, 'arrival': 8, 'departure': 14}, {'id': 219, 'arrival': 5, 'departure': 7}, {'id': 230, 'arrival': 5, 'departure': 9}]
+    
+
+    Arrival: 10, Departure: 14
+    Carpool Driver: {'id': 34, 'arrival': 10, 'departure': 11}
+    Carpool Riders Departure: [{'id': 34, 'arrival': 10, 'departure': 11}, {'id': 129, 'arrival': 10, 'departure': 14}]
+    Carpool Riders Return: [{'id': 34, 'arrival': 10, 'departure': 11}, {'id': 129, 'arrival': 10, 'departure': 14}]
+    
+
+    Arrival: 7, Departure: 12
+    Carpool Driver: {'id': 35, 'arrival': 7, 'departure': 12}
+    Carpool Riders Departure: [{'id': 35, 'arrival': 7, 'departure': 12}, {'id': 112, 'arrival': 8, 'departure': 12}, {'id': 194, 'arrival': 7, 'departure': 8}]
+    Carpool Riders Return: [{'id': 35, 'arrival': 7, 'departure': 12}, {'id': 112, 'arrival': 8, 'departure': 12}]
+    
+
+    Arrival: 5, Departure: 8
+    Carpool Driver: {'id': 36, 'arrival': 5, 'departure': 6}
+    Carpool Riders Departure: [{'id': 36, 'arrival': 5, 'departure': 6}, {'id': 236, 'arrival': 5, 'departure': 8}]
+    Carpool Riders Return: [{'id': 36, 'arrival': 5, 'departure': 6}, {'id': 236, 'arrival': 5, 'departure': 8}]
+    
+
+    Arrival: 12, Departure: 17
+    Carpool Driver: {'id': 37, 'arrival': 12, 'departure': 13}
+    Carpool Riders Departure: [{'id': 37, 'arrival': 12, 'departure': 13}, {'id': 195, 'arrival': 12, 'departure': 17}, {'id': 247, 'arrival': 12, 'departure': 15}]
+    Carpool Riders Return: [{'id': 37, 'arrival': 12, 'departure': 13}, {'id': 195, 'arrival': 12, 'departure': 17}, {'id': 247, 'arrival': 12, 'departure': 15}]
+    
+
+    Arrival: 11, Departure: 15
+    Carpool Driver: {'id': 39, 'arrival': 11, 'departure': 12}
+    Carpool Riders Departure: [{'id': 39, 'arrival': 11, 'departure': 12}, {'id': 46, 'arrival': 11, 'departure': 15}, {'id': 237, 'arrival': 11, 'departure': 12}]
+    Carpool Riders Return: [{'id': 39, 'arrival': 11, 'departure': 12}, {'id': 46, 'arrival': 11, 'departure': 15}, {'id': 237, 'arrival': 11, 'departure': 12}]
+    
+
+    Arrival: 11, Departure: 12
+    Carpool Driver: {'id': 41, 'arrival': 11, 'departure': 12}
+    Carpool Riders Departure: [{'id': 41, 'arrival': 11, 'departure': 12}, {'id': 144, 'arrival': 11, 'departure': 14}]
+    Carpool Riders Return: [{'id': 41, 'arrival': 11, 'departure': 12}, {'id': 246, 'arrival': 11, 'departure': 12}]
+    
+
+    Arrival: 6, Departure: 8
+    Carpool Driver: {'id': 42, 'arrival': 7, 'departure': 8}
+    Carpool Riders Departure: [{'id': 9, 'arrival': 7, 'departure': 8}, {'id': 42, 'arrival': 7, 'departure': 8}, {'id': 48, 'arrival': 6, 'departure': 7}, {'id': 211, 'arrival': 7, 'departure': 8}]
+    Carpool Riders Return: [{'id': 9, 'arrival': 7, 'departure': 8}, {'id': 42, 'arrival': 7, 'departure': 8}, {'id': 48, 'arrival': 6, 'departure': 7}, {'id': 211, 'arrival': 7, 'departure': 8}]
+    
+
+    Arrival: 7, Departure: 12
+    Carpool Driver: {'id': 45, 'arrival': 7, 'departure': 12}
+    Carpool Riders Departure: [{'id': 45, 'arrival': 7, 'departure': 12}, {'id': 215, 'arrival': 7, 'departure': 10}]
+    Carpool Riders Return: [{'id': 45, 'arrival': 7, 'departure': 12}, {'id': 215, 'arrival': 7, 'departure': 10}]
+    
+
+    Arrival: 6, Departure: 10
+    Carpool Driver: {'id': 49, 'arrival': 7, 'departure': 10}
+    Carpool Riders Departure: [{'id': 49, 'arrival': 7, 'departure': 10}, {'id': 107, 'arrival': 7, 'departure': 9}, {'id': 174, 'arrival': 6, 'departure': 10}]
+    Carpool Riders Return: [{'id': 49, 'arrival': 7, 'departure': 10}, {'id': 107, 'arrival': 7, 'departure': 9}, {'id': 174, 'arrival': 6, 'departure': 10}]
+    
+
+    Arrival: 2, Departure: 15
+    Carpool Driver: {'id': 50, 'arrival': 2, 'departure': 5}
+    Carpool Riders Departure: [{'id': 50, 'arrival': 2, 'departure': 5}, {'id': 88, 'arrival': 6, 'departure': 11}, {'id': 106, 'arrival': 2, 'departure': 4}, {'id': 190, 'arrival': 9, 'departure': 15}]
+    Carpool Riders Return: [{'id': 50, 'arrival': 2, 'departure': 5}, {'id': 88, 'arrival': 6, 'departure': 11}, {'id': 106, 'arrival': 2, 'departure': 4}, {'id': 190, 'arrival': 9, 'departure': 15}]
+    
+
+    Arrival: 4, Departure: 10
+    Carpool Driver: {'id': 52, 'arrival': 4, 'departure': 5}
+    Carpool Riders Departure: [{'id': 52, 'arrival': 4, 'departure': 5}, {'id': 114, 'arrival': 4, 'departure': 10}]
+    Carpool Riders Return: [{'id': 52, 'arrival': 4, 'departure': 5}, {'id': 114, 'arrival': 4, 'departure': 10}]
+    
+
+    Arrival: 12, Departure: 13
+    Carpool Driver: {'id': 54, 'arrival': 12, 'departure': 13}
+    Carpool Riders Departure: [{'id': 54, 'arrival': 12, 'departure': 13}, {'id': 233, 'arrival': 12, 'departure': 13}]
+    Carpool Riders Return: [{'id': 54, 'arrival': 12, 'departure': 13}, {'id': 233, 'arrival': 12, 'departure': 13}]
+    
+
+    Arrival: 3, Departure: 9
+    Carpool Driver: {'id': 55, 'arrival': 3, 'departure': 4}
+    Carpool Riders Departure: [{'id': 55, 'arrival': 3, 'departure': 4}, {'id': 65, 'arrival': 6, 'departure': 10}, {'id': 125, 'arrival': 3, 'departure': 7}, {'id': 151, 'arrival': 8, 'departure': 9}]
+    Carpool Riders Return: [{'id': 55, 'arrival': 3, 'departure': 4}, {'id': 125, 'arrival': 3, 'departure': 7}, {'id': 151, 'arrival': 8, 'departure': 9}]
+    
+
+    Arrival: 2, Departure: 3
+    Carpool Driver: {'id': 56, 'arrival': 2, 'departure': 3}
+    Carpool Riders Departure: [{'id': 56, 'arrival': 2, 'departure': 3}, {'id': 243, 'arrival': 2, 'departure': 3}]
+    Carpool Riders Return: [{'id': 56, 'arrival': 2, 'departure': 3}, {'id': 243, 'arrival': 2, 'departure': 3}]
+    
+
+    Arrival: 9, Departure: 11
+    Carpool Driver: {'id': 58, 'arrival': 10, 'departure': 11}
+    Carpool Riders Departure: [{'id': 58, 'arrival': 10, 'departure': 11}, {'id': 80, 'arrival': 9, 'departure': 10}]
+    Carpool Riders Return: [{'id': 58, 'arrival': 10, 'departure': 11}, {'id': 80, 'arrival': 9, 'departure': 10}]
+    
+
+    Arrival: 3, Departure: 11
+    Carpool Driver: {'id': 59, 'arrival': 3, 'departure': 4}
+    Carpool Riders Departure: [{'id': 59, 'arrival': 3, 'departure': 4}, {'id': 165, 'arrival': 3, 'departure': 6}, {'id': 169, 'arrival': 6, 'departure': 11}]
+    Carpool Riders Return: [{'id': 59, 'arrival': 3, 'departure': 4}, {'id': 165, 'arrival': 3, 'departure': 6}, {'id': 169, 'arrival': 6, 'departure': 11}]
+    
+
+    Arrival: 5, Departure: 10
+    Carpool Driver: {'id': 60, 'arrival': 5, 'departure': 6}
+    Carpool Riders Departure: [{'id': 3, 'arrival': 5, 'departure': 6}, {'id': 60, 'arrival': 5, 'departure': 6}, {'id': 199, 'arrival': 5, 'departure': 10}]
+    Carpool Riders Return: [{'id': 3, 'arrival': 5, 'departure': 6}, {'id': 60, 'arrival': 5, 'departure': 6}, {'id': 199, 'arrival': 5, 'departure': 10}]
+    
+
+    Arrival: 1, Departure: 5
+    Carpool Driver: {'id': 63, 'arrival': 1, 'departure': 5}
+    Carpool Riders Departure: [{'id': 63, 'arrival': 1, 'departure': 5}]
+    Carpool Riders Return: [{'id': 63, 'arrival': 1, 'departure': 5}]
+    
+
+    Arrival: 4, Departure: 8
+    Carpool Driver: {'id': 67, 'arrival': 4, 'departure': 5}
+    Carpool Riders Departure: [{'id': 61, 'arrival': 4, 'departure': 8}, {'id': 67, 'arrival': 4, 'departure': 5}]
+    Carpool Riders Return: [{'id': 61, 'arrival': 4, 'departure': 8}, {'id': 67, 'arrival': 4, 'departure': 5}]
+    
+
+    Arrival: 11, Departure: 12
+    Carpool Driver: {'id': 68, 'arrival': 11, 'departure': 12}
+    Carpool Riders Departure: [{'id': 68, 'arrival': 11, 'departure': 12}]
+    Carpool Riders Return: [{'id': 68, 'arrival': 11, 'departure': 12}]
+    
+
+    Arrival: 1, Departure: 3
+    Carpool Driver: {'id': 69, 'arrival': 1, 'departure': 3}
+    Carpool Riders Departure: [{'id': 69, 'arrival': 1, 'departure': 3}, {'id': 189, 'arrival': 1, 'departure': 6}]
+    Carpool Riders Return: [{'id': 69, 'arrival': 1, 'departure': 3}]
+    
+
+    Arrival: 2, Departure: 4
+    Carpool Driver: {'id': 71, 'arrival': 2, 'departure': 3}
+    Carpool Riders Departure: [{'id': 71, 'arrival': 2, 'departure': 3}, {'id': 204, 'arrival': 2, 'departure': 4}]
+    Carpool Riders Return: [{'id': 71, 'arrival': 2, 'departure': 3}, {'id': 204, 'arrival': 2, 'departure': 4}]
+    
+
+    Arrival: 9, Departure: 14
+    Carpool Driver: {'id': 72, 'arrival': 9, 'departure': 11}
+    Carpool Riders Departure: [{'id': 72, 'arrival': 9, 'departure': 11}, {'id': 118, 'arrival': 9, 'departure': 11}, {'id': 224, 'arrival': 9, 'departure': 14}]
+    Carpool Riders Return: [{'id': 72, 'arrival': 9, 'departure': 11}, {'id': 118, 'arrival': 9, 'departure': 11}, {'id': 224, 'arrival': 9, 'departure': 14}]
+    
+
+    Arrival: 5, Departure: 8
+    Carpool Driver: {'id': 73, 'arrival': 5, 'departure': 8}
+    Carpool Riders Departure: [{'id': 73, 'arrival': 5, 'departure': 8}]
+    Carpool Riders Return: [{'id': 73, 'arrival': 5, 'departure': 8}]
+    
+
+    Arrival: 2, Departure: 7
+    Carpool Driver: {'id': 74, 'arrival': 2, 'departure': 7}
+    Carpool Riders Departure: [{'id': 74, 'arrival': 2, 'departure': 7}, {'id': 170, 'arrival': 2, 'departure': 4}]
+    Carpool Riders Return: [{'id': 74, 'arrival': 2, 'departure': 7}, {'id': 170, 'arrival': 2, 'departure': 4}]
+    
+
+    Arrival: 11, Departure: 16
+    Carpool Driver: {'id': 76, 'arrival': 11, 'departure': 13}
+    Carpool Riders Departure: [{'id': 76, 'arrival': 11, 'departure': 13}, {'id': 136, 'arrival': 11, 'departure': 16}, {'id': 202, 'arrival': 11, 'departure': 15}]
+    Carpool Riders Return: [{'id': 76, 'arrival': 11, 'departure': 13}, {'id': 136, 'arrival': 11, 'departure': 16}, {'id': 202, 'arrival': 11, 'departure': 15}]
+    
+
+    Arrival: 11, Departure: 14
+    Carpool Driver: {'id': 77, 'arrival': 11, 'departure': 12}
+    Carpool Riders Departure: [{'id': 77, 'arrival': 11, 'departure': 12}, {'id': 246, 'arrival': 11, 'departure': 12}]
+    Carpool Riders Return: [{'id': 77, 'arrival': 11, 'departure': 12}, {'id': 144, 'arrival': 11, 'departure': 14}]
+    
+
+    Arrival: 3, Departure: 7
+    Carpool Driver: {'id': 78, 'arrival': 3, 'departure': 4}
+    Carpool Riders Departure: [{'id': 78, 'arrival': 3, 'departure': 4}, {'id': 119, 'arrival': 3, 'departure': 4}]
+    Carpool Riders Return: [{'id': 78, 'arrival': 3, 'departure': 4}, {'id': 223, 'arrival': 3, 'departure': 7}]
+    
+
+    Arrival: 3, Departure: 9
+    Carpool Driver: {'id': 79, 'arrival': 3, 'departure': 4}
+    Carpool Riders Departure: [{'id': 22, 'arrival': 3, 'departure': 9}, {'id': 79, 'arrival': 3, 'departure': 4}, {'id': 223, 'arrival': 3, 'departure': 7}]
+    Carpool Riders Return: [{'id': 22, 'arrival': 3, 'departure': 9}, {'id': 79, 'arrival': 3, 'departure': 4}, {'id': 119, 'arrival': 3, 'departure': 4}]
+    
+
+    Arrival: 1, Departure: 6
+    Carpool Driver: {'id': 84, 'arrival': 1, 'departure': 2}
+    Carpool Riders Departure: [{'id': 84, 'arrival': 1, 'departure': 2}]
+    Carpool Riders Return: [{'id': 84, 'arrival': 1, 'departure': 2}, {'id': 189, 'arrival': 1, 'departure': 6}]
+    
+
+    Arrival: 12, Departure: 17
+    Carpool Driver: {'id': 85, 'arrival': 12, 'departure': 15}
+    Carpool Riders Departure: [{'id': 70, 'arrival': 12, 'departure': 17}, {'id': 85, 'arrival': 12, 'departure': 15}, {'id': 214, 'arrival': 12, 'departure': 13}]
+    Carpool Riders Return: [{'id': 70, 'arrival': 12, 'departure': 17}, {'id': 85, 'arrival': 12, 'departure': 15}, {'id': 214, 'arrival': 12, 'departure': 13}]
+    
+
+    Arrival: 12, Departure: 16
+    Carpool Driver: {'id': 86, 'arrival': 12, 'departure': 14}
+    Carpool Riders Departure: [{'id': 86, 'arrival': 12, 'departure': 14}, {'id': 244, 'arrival': 12, 'departure': 13}]
+    Carpool Riders Return: [{'id': 13, 'arrival': 12, 'departure': 16}, {'id': 86, 'arrival': 12, 'departure': 14}]
+    
+
+    Arrival: 3, Departure: 8
+    Carpool Driver: {'id': 89, 'arrival': 3, 'departure': 6}
+    Carpool Riders Departure: [{'id': 47, 'arrival': 3, 'departure': 8}, {'id': 89, 'arrival': 3, 'departure': 6}]
+    Carpool Riders Return: [{'id': 47, 'arrival': 3, 'departure': 8}, {'id': 89, 'arrival': 3, 'departure': 6}]
+    
+
+    Arrival: 6, Departure: 7
+    Carpool Driver: {'id': 93, 'arrival': 6, 'departure': 7}
+    Carpool Riders Departure: [{'id': 53, 'arrival': 6, 'departure': 7}, {'id': 93, 'arrival': 6, 'departure': 7}]
+    Carpool Riders Return: [{'id': 53, 'arrival': 6, 'departure': 7}, {'id': 93, 'arrival': 6, 'departure': 7}]
+    
+
+    Arrival: 11, Departure: 16
+    Carpool Driver: {'id': 94, 'arrival': 11, 'departure': 14}
+    Carpool Riders Departure: [{'id': 66, 'arrival': 11, 'departure': 16}, {'id': 94, 'arrival': 11, 'departure': 14}, {'id': 186, 'arrival': 11, 'departure': 14}]
+    Carpool Riders Return: [{'id': 66, 'arrival': 11, 'departure': 16}, {'id': 94, 'arrival': 11, 'departure': 14}, {'id': 186, 'arrival': 11, 'departure': 14}]
+    
+
+    Arrival: 4, Departure: 10
+    Carpool Driver: {'id': 95, 'arrival': 4, 'departure': 5}
+    Carpool Riders Departure: [{'id': 95, 'arrival': 4, 'departure': 5}, {'id': 154, 'arrival': 4, 'departure': 10}]
+    Carpool Riders Return: [{'id': 95, 'arrival': 4, 'departure': 5}, {'id': 154, 'arrival': 4, 'departure': 10}]
+    
+
+    Arrival: 7, Departure: 12
+    Carpool Driver: {'id': 99, 'arrival': 7, 'departure': 8}
+    Carpool Riders Departure: [{'id': 90, 'arrival': 7, 'departure': 9}, {'id': 99, 'arrival': 7, 'departure': 8}, {'id': 171, 'arrival': 8, 'departure': 12}]
+    Carpool Riders Return: [{'id': 90, 'arrival': 7, 'departure': 9}, {'id': 99, 'arrival': 7, 'departure': 8}, {'id': 171, 'arrival': 8, 'departure': 12}]
+    
+
+    Arrival: 2, Departure: 5
+    Carpool Driver: {'id': 100, 'arrival': 2, 'departure': 5}
+    Carpool Riders Departure: [{'id': 100, 'arrival': 2, 'departure': 5}]
+    Carpool Riders Return: [{'id': 100, 'arrival': 2, 'departure': 5}]
+    
+
+    Arrival: 8, Departure: 9
+    Carpool Driver: {'id': 102, 'arrival': 8, 'departure': 9}
+    Carpool Riders Departure: [{'id': 102, 'arrival': 8, 'departure': 9}, {'id': 241, 'arrival': 8, 'departure': 9}]
+    Carpool Riders Return: [{'id': 102, 'arrival': 8, 'departure': 9}, {'id': 241, 'arrival': 8, 'departure': 9}]
+    
+
+    Arrival: 2, Departure: 4
+    Carpool Driver: {'id': 103, 'arrival': 2, 'departure': 4}
+    Carpool Riders Departure: [{'id': 62, 'arrival': 2, 'departure': 3}, {'id': 103, 'arrival': 2, 'departure': 4}]
+    Carpool Riders Return: [{'id': 62, 'arrival': 2, 'departure': 3}, {'id': 103, 'arrival': 2, 'departure': 4}]
+    
+
+    Arrival: 2, Departure: 6
+    Carpool Driver: {'id': 104, 'arrival': 2, 'departure': 4}
+    Carpool Riders Departure: [{'id': 104, 'arrival': 2, 'departure': 4}, {'id': 200, 'arrival': 2, 'departure': 5}, {'id': 240, 'arrival': 2, 'departure': 6}]
+    Carpool Riders Return: [{'id': 104, 'arrival': 2, 'departure': 4}, {'id': 200, 'arrival': 2, 'departure': 5}, {'id': 240, 'arrival': 2, 'departure': 6}]
+    
+
+    Arrival: 3, Departure: 4
+    Carpool Driver: {'id': 108, 'arrival': 3, 'departure': 4}
+    Carpool Riders Departure: [{'id': 108, 'arrival': 3, 'departure': 4}, {'id': 229, 'arrival': 3, 'departure': 4}]
+    Carpool Riders Return: [{'id': 108, 'arrival': 3, 'departure': 4}, {'id': 229, 'arrival': 3, 'departure': 4}]
+    
+
+    Arrival: 4, Departure: 9
+    Carpool Driver: {'id': 110, 'arrival': 4, 'departure': 6}
+    Carpool Riders Departure: [{'id': 83, 'arrival': 4, 'departure': 5}, {'id': 110, 'arrival': 4, 'departure': 6}, {'id': 196, 'arrival': 4, 'departure': 9}]
+    Carpool Riders Return: [{'id': 83, 'arrival': 4, 'departure': 5}, {'id': 110, 'arrival': 4, 'departure': 6}, {'id': 196, 'arrival': 4, 'departure': 9}]
+    
+
+    Arrival: 1, Departure: 2
+    Carpool Driver: {'id': 111, 'arrival': 1, 'departure': 2}
+    Carpool Riders Departure: [{'id': 111, 'arrival': 1, 'departure': 2}, {'id': 201, 'arrival': 1, 'departure': 2}]
+    Carpool Riders Return: [{'id': 111, 'arrival': 1, 'departure': 2}, {'id': 201, 'arrival': 1, 'departure': 2}]
+    
+
+    Arrival: 2, Departure: 9
+    Carpool Driver: {'id': 113, 'arrival': 2, 'departure': 5}
+    Carpool Riders Departure: [{'id': 87, 'arrival': 2, 'departure': 9}, {'id': 113, 'arrival': 2, 'departure': 5}]
+    Carpool Riders Return: [{'id': 87, 'arrival': 2, 'departure': 9}, {'id': 113, 'arrival': 2, 'departure': 5}]
+    
+
+    Arrival: 10, Departure: 14
+    Carpool Driver: {'id': 117, 'arrival': 10, 'departure': 11}
+    Carpool Riders Departure: [{'id': 96, 'arrival': 10, 'departure': 11}, {'id': 117, 'arrival': 10, 'departure': 11}, {'id': 203, 'arrival': 10, 'departure': 14}]
+    Carpool Riders Return: [{'id': 96, 'arrival': 10, 'departure': 11}, {'id': 117, 'arrival': 10, 'departure': 11}, {'id': 203, 'arrival': 10, 'departure': 14}]
+    
+
+    Arrival: 10, Departure: 13
+    Carpool Driver: {'id': 120, 'arrival': 10, 'departure': 13}
+    Carpool Riders Departure: [{'id': 120, 'arrival': 10, 'departure': 13}, {'id': 212, 'arrival': 10, 'departure': 11}, {'id': 218, 'arrival': 10, 'departure': 12}]
+    Carpool Riders Return: [{'id': 120, 'arrival': 10, 'departure': 13}, {'id': 212, 'arrival': 10, 'departure': 11}, {'id': 218, 'arrival': 10, 'departure': 12}]
+    
+
+    Arrival: 3, Departure: 9
+    Carpool Driver: {'id': 122, 'arrival': 3, 'departure': 5}
+    Carpool Riders Departure: [{'id': 101, 'arrival': 3, 'departure': 6}, {'id': 122, 'arrival': 3, 'departure': 5}, {'id': 187, 'arrival': 6, 'departure': 9}, {'id': 239, 'arrival': 3, 'departure': 7}]
+    Carpool Riders Return: [{'id': 101, 'arrival': 3, 'departure': 6}, {'id': 122, 'arrival': 3, 'departure': 5}, {'id': 187, 'arrival': 6, 'departure': 9}, {'id': 239, 'arrival': 3, 'departure': 7}]
+    
+
+    Arrival: 4, Departure: 8
+    Carpool Driver: {'id': 123, 'arrival': 4, 'departure': 6}
+    Carpool Riders Departure: [{'id': 123, 'arrival': 4, 'departure': 6}, {'id': 156, 'arrival': 4, 'departure': 6}, {'id': 157, 'arrival': 4, 'departure': 8}, {'id': 160, 'arrival': 4, 'departure': 10}]
+    Carpool Riders Return: [{'id': 123, 'arrival': 4, 'departure': 6}, {'id': 164, 'arrival': 4, 'departure': 7}, {'id': 220, 'arrival': 4, 'departure': 5}, {'id': 228, 'arrival': 4, 'departure': 8}]
+    
+
+    Arrival: 10, Departure: 14
+    Carpool Driver: {'id': 124, 'arrival': 10, 'departure': 14}
+    Carpool Riders Departure: [{'id': 124, 'arrival': 10, 'departure': 14}, {'id': 208, 'arrival': 10, 'departure': 11}, {'id': 210, 'arrival': 10, 'departure': 13}]
+    Carpool Riders Return: [{'id': 124, 'arrival': 10, 'departure': 14}, {'id': 208, 'arrival': 10, 'departure': 11}, {'id': 210, 'arrival': 10, 'departure': 13}]
+    
+
+    Arrival: 3, Departure: 10
+    Carpool Driver: {'id': 128, 'arrival': 3, 'departure': 4}
+    Carpool Riders Departure: [{'id': 64, 'arrival': 3, 'departure': 10}, {'id': 128, 'arrival': 3, 'departure': 4}]
+    Carpool Riders Return: [{'id': 64, 'arrival': 3, 'departure': 10}, {'id': 65, 'arrival': 6, 'departure': 10}, {'id': 128, 'arrival': 3, 'departure': 4}]
+    
+
+    Arrival: 1, Departure: 6
+    Carpool Driver: {'id': 130, 'arrival': 1, 'departure': 2}
+    Carpool Riders Departure: [{'id': 38, 'arrival': 1, 'departure': 6}, {'id': 130, 'arrival': 1, 'departure': 2}]
+    Carpool Riders Return: [{'id': 38, 'arrival': 1, 'departure': 6}, {'id': 130, 'arrival': 1, 'departure': 2}]
+    
+
+    Arrival: 4, Departure: 6
+    Carpool Driver: {'id': 131, 'arrival': 4, 'departure': 5}
+    Carpool Riders Departure: [{'id': 131, 'arrival': 4, 'departure': 5}, {'id': 228, 'arrival': 4, 'departure': 8}]
+    Carpool Riders Return: [{'id': 131, 'arrival': 4, 'departure': 5}, {'id': 156, 'arrival': 4, 'departure': 6}]
+    
+
+    Arrival: 12, Departure: 15
+    Carpool Driver: {'id': 132, 'arrival': 12, 'departure': 15}
+    Carpool Riders Departure: [{'id': 132, 'arrival': 12, 'departure': 15}, {'id': 225, 'arrival': 12, 'departure': 13}, {'id': 235, 'arrival': 12, 'departure': 14}]
+    Carpool Riders Return: [{'id': 132, 'arrival': 12, 'departure': 15}, {'id': 225, 'arrival': 12, 'departure': 13}, {'id': 235, 'arrival': 12, 'departure': 14}]
+    
+
+    Arrival: 9, Departure: 14
+    Carpool Driver: {'id': 133, 'arrival': 12, 'departure': 13}
+    Carpool Riders Departure: [{'id': 133, 'arrival': 12, 'departure': 13}, {'id': 159, 'arrival': 9, 'departure': 14}]
+    Carpool Riders Return: [{'id': 133, 'arrival': 12, 'departure': 13}, {'id': 159, 'arrival': 9, 'departure': 14}]
+    
+
+    Arrival: 6, Departure: 10
+    Carpool Driver: {'id': 134, 'arrival': 6, 'departure': 9}
+    Carpool Riders Departure: [{'id': 97, 'arrival': 6, 'departure': 10}, {'id': 134, 'arrival': 6, 'departure': 9}, {'id': 175, 'arrival': 6, 'departure': 12}]
+    Carpool Riders Return: [{'id': 97, 'arrival': 6, 'departure': 10}, {'id': 134, 'arrival': 6, 'departure': 9}, {'id': 166, 'arrival': 6, 'departure': 10}]
+    
+
+    Arrival: 11, Departure: 14
+    Carpool Driver: {'id': 137, 'arrival': 11, 'departure': 14}
+    Carpool Riders Departure: [{'id': 44, 'arrival': 11, 'departure': 12}, {'id': 137, 'arrival': 11, 'departure': 14}]
+    Carpool Riders Return: [{'id': 44, 'arrival': 11, 'departure': 12}, {'id': 137, 'arrival': 11, 'departure': 14}]
+    
+
+    Arrival: 10, Departure: 14
+    Carpool Driver: {'id': 138, 'arrival': 10, 'departure': 12}
+    Carpool Riders Departure: [{'id': 81, 'arrival': 10, 'departure': 11}, {'id': 116, 'arrival': 10, 'departure': 14}, {'id': 138, 'arrival': 10, 'departure': 12}]
+    Carpool Riders Return: [{'id': 81, 'arrival': 10, 'departure': 11}, {'id': 116, 'arrival': 10, 'departure': 14}, {'id': 138, 'arrival': 10, 'departure': 12}]
+    
+
+    Arrival: 1, Departure: 2
+    Carpool Driver: {'id': 140, 'arrival': 1, 'departure': 2}
+    Carpool Riders Departure: [{'id': 140, 'arrival': 1, 'departure': 2}]
+    Carpool Riders Return: [{'id': 140, 'arrival': 1, 'departure': 2}]
+    
+
+    Arrival: 6, Departure: 11
+    Carpool Driver: {'id': 141, 'arrival': 10, 'departure': 11}
+    Carpool Riders Departure: [{'id': 8, 'arrival': 9, 'departure': 11}, {'id': 51, 'arrival': 6, 'departure': 11}, {'id': 141, 'arrival': 10, 'departure': 11}]
+    Carpool Riders Return: [{'id': 8, 'arrival': 9, 'departure': 11}, {'id': 51, 'arrival': 6, 'departure': 11}, {'id': 141, 'arrival': 10, 'departure': 11}]
+    
+
+    Arrival: 12, Departure: 14
+    Carpool Driver: {'id': 142, 'arrival': 12, 'departure': 13}
+    Carpool Riders Departure: [{'id': 142, 'arrival': 12, 'departure': 13}, {'id': 193, 'arrival': 12, 'departure': 14}]
+    Carpool Riders Return: [{'id': 142, 'arrival': 12, 'departure': 13}, {'id': 193, 'arrival': 12, 'departure': 14}]
+    
+
+    Arrival: 9, Departure: 13
+    Carpool Driver: {'id': 143, 'arrival': 9, 'departure': 10}
+    Carpool Riders Departure: [{'id': 143, 'arrival': 9, 'departure': 10}, {'id': 221, 'arrival': 9, 'departure': 13}]
+    Carpool Riders Return: [{'id': 143, 'arrival': 9, 'departure': 10}, {'id': 221, 'arrival': 9, 'departure': 13}]
+    
+
+    Arrival: 12, Departure: 14
+    Carpool Driver: {'id': 145, 'arrival': 12, 'departure': 14}
+    Carpool Riders Departure: [{'id': 145, 'arrival': 12, 'departure': 14}, {'id': 168, 'arrival': 12, 'departure': 15}, {'id': 217, 'arrival': 12, 'departure': 13}]
+    Carpool Riders Return: [{'id': 145, 'arrival': 12, 'departure': 14}, {'id': 217, 'arrival': 12, 'departure': 13}, {'id': 244, 'arrival': 12, 'departure': 13}]
+    
+
+    Arrival: 5, Departure: 6
+    Carpool Driver: {'id': 148, 'arrival': 5, 'departure': 6}
+    Carpool Riders Departure: [{'id': 148, 'arrival': 5, 'departure': 6}, {'id': 185, 'arrival': 5, 'departure': 6}]
+    Carpool Riders Return: [{'id': 148, 'arrival': 5, 'departure': 6}, {'id': 185, 'arrival': 5, 'departure': 6}]
+    
+
+    Arrival: 2, Departure: 9
+    Carpool Driver: {'id': 149, 'arrival': 2, 'departure': 7}
+    Carpool Riders Departure: [{'id': 149, 'arrival': 2, 'departure': 7}, {'id': 222, 'arrival': 6, 'departure': 9}]
+    Carpool Riders Return: [{'id': 149, 'arrival': 2, 'departure': 7}, {'id': 222, 'arrival': 6, 'departure': 9}]
+    
+
+    Arrival: 2, Departure: 8
+    Carpool Driver: {'id': 150, 'arrival': 2, 'departure': 6}
+    Carpool Riders Departure: [{'id': 127, 'arrival': 6, 'departure': 7}, {'id': 150, 'arrival': 2, 'departure': 6}, {'id': 238, 'arrival': 6, 'departure': 8}]
+    Carpool Riders Return: [{'id': 127, 'arrival': 6, 'departure': 7}, {'id': 150, 'arrival': 2, 'departure': 6}, {'id': 238, 'arrival': 6, 'departure': 8}]
+    
+
+    Arrival: 3, Departure: 6
+    Carpool Driver: {'id': 152, 'arrival': 3, 'departure': 6}
+    Carpool Riders Departure: [{'id': 152, 'arrival': 3, 'departure': 6}, {'id': 227, 'arrival': 3, 'departure': 4}]
+    Carpool Riders Return: [{'id': 152, 'arrival': 3, 'departure': 6}, {'id': 227, 'arrival': 3, 'departure': 4}]
+    
+
+    Arrival: 8, Departure: 10
+    Carpool Driver: {'id': 153, 'arrival': 8, 'departure': 9}
+    Carpool Riders Departure: [{'id': 92, 'arrival': 8, 'departure': 10}, {'id': 153, 'arrival': 8, 'departure': 9}]
+    Carpool Riders Return: [{'id': 92, 'arrival': 8, 'departure': 10}, {'id': 153, 'arrival': 8, 'departure': 9}]
+    
+
+    Arrival: 12, Departure: 16
+    Carpool Driver: {'id': 155, 'arrival': 12, 'departure': 16}
+    Carpool Riders Departure: [{'id': 13, 'arrival': 12, 'departure': 16}, {'id': 155, 'arrival': 12, 'departure': 16}]
+    Carpool Riders Return: [{'id': 155, 'arrival': 12, 'departure': 16}, {'id': 168, 'arrival': 12, 'departure': 15}]
+    
+
+    Arrival: 8, Departure: 10
+    Carpool Driver: {'id': 158, 'arrival': 8, 'departure': 9}
+    Carpool Riders Departure: [{'id': 146, 'arrival': 8, 'departure': 9}, {'id': 158, 'arrival': 8, 'departure': 9}, {'id': 209, 'arrival': 8, 'departure': 10}]
+    Carpool Riders Return: [{'id': 146, 'arrival': 8, 'departure': 9}, {'id': 158, 'arrival': 8, 'departure': 9}, {'id': 209, 'arrival': 8, 'departure': 10}]
+    
+
+    Arrival: 11, Departure: 12
+    Carpool Driver: {'id': 161, 'arrival': 11, 'departure': 12}
+    Carpool Riders Departure: [{'id': 161, 'arrival': 11, 'departure': 12}]
+    Carpool Riders Return: [{'id': 161, 'arrival': 11, 'departure': 12}]
+    
+
+    Arrival: 4, Departure: 8
+    Carpool Driver: {'id': 162, 'arrival': 4, 'departure': 5}
+    Carpool Riders Departure: [{'id': 162, 'arrival': 4, 'departure': 5}, {'id': 206, 'arrival': 6, 'departure': 7}, {'id': 220, 'arrival': 4, 'departure': 5}]
+    Carpool Riders Return: [{'id': 157, 'arrival': 4, 'departure': 8}, {'id': 162, 'arrival': 4, 'departure': 5}, {'id': 206, 'arrival': 6, 'departure': 7}]
+    
+
+    Arrival: 2, Departure: 3
+    Carpool Driver: {'id': 167, 'arrival': 2, 'departure': 3}
+    Carpool Riders Departure: [{'id': 167, 'arrival': 2, 'departure': 3}, {'id': 191, 'arrival': 2, 'departure': 3}]
+    Carpool Riders Return: [{'id': 167, 'arrival': 2, 'departure': 3}, {'id': 191, 'arrival': 2, 'departure': 3}]
+    
+
+    Arrival: 2, Departure: 6
+    Carpool Driver: {'id': 172, 'arrival': 2, 'departure': 6}
+    Carpool Riders Departure: [{'id': 172, 'arrival': 2, 'departure': 6}, {'id': 234, 'arrival': 2, 'departure': 4}]
+    Carpool Riders Return: [{'id': 172, 'arrival': 2, 'departure': 6}, {'id': 234, 'arrival': 2, 'departure': 4}]
+    
+
+    Arrival: 2, Departure: 4
+    Carpool Driver: {'id': 173, 'arrival': 2, 'departure': 4}
+    Carpool Riders Departure: [{'id': 173, 'arrival': 2, 'departure': 4}, {'id': 192, 'arrival': 2, 'departure': 4}]
+    Carpool Riders Return: [{'id': 173, 'arrival': 2, 'departure': 4}, {'id': 192, 'arrival': 2, 'departure': 4}]
+    
+
+    Arrival: 1, Departure: 3
+    Carpool Driver: {'id': 176, 'arrival': 1, 'departure': 3}
+    Carpool Riders Departure: [{'id': 176, 'arrival': 1, 'departure': 3}]
+    Carpool Riders Return: [{'id': 176, 'arrival': 1, 'departure': 3}]
+    
+
+    Arrival: 1, Departure: 3
+    Carpool Driver: {'id': 177, 'arrival': 1, 'departure': 3}
+    Carpool Riders Departure: [{'id': 177, 'arrival': 1, 'departure': 3}]
+    Carpool Riders Return: [{'id': 177, 'arrival': 1, 'departure': 3}]
+    
+
+    Arrival: 1, Departure: 3
+    Carpool Driver: {'id': 178, 'arrival': 1, 'departure': 2}
+    Carpool Riders Departure: [{'id': 178, 'arrival': 1, 'departure': 2}, {'id': 226, 'arrival': 1, 'departure': 3}]
+    Carpool Riders Return: [{'id': 178, 'arrival': 1, 'departure': 2}, {'id': 226, 'arrival': 1, 'departure': 3}]
+    
+
+    Arrival: 1, Departure: 3
+    Carpool Driver: {'id': 180, 'arrival': 1, 'departure': 3}
+    Carpool Riders Departure: [{'id': 180, 'arrival': 1, 'departure': 3}]
+    Carpool Riders Return: [{'id': 180, 'arrival': 1, 'departure': 3}]
+    
+
+    Arrival: 1, Departure: 4
+    Carpool Driver: {'id': 181, 'arrival': 1, 'departure': 4}
+    Carpool Riders Departure: [{'id': 181, 'arrival': 1, 'departure': 4}, {'id': 231, 'arrival': 1, 'departure': 2}]
+    Carpool Riders Return: [{'id': 181, 'arrival': 1, 'departure': 4}, {'id': 231, 'arrival': 1, 'departure': 2}]
+    
+
+    Arrival: 10, Departure: 12
+    Carpool Driver: {'id': 183, 'arrival': 10, 'departure': 12}
+    Carpool Riders Departure: [{'id': 40, 'arrival': 10, 'departure': 11}, {'id': 183, 'arrival': 10, 'departure': 12}]
+    Carpool Riders Return: [{'id': 40, 'arrival': 10, 'departure': 11}, {'id': 183, 'arrival': 10, 'departure': 12}]
+    
+
+    Arrival: 11, Departure: 15
+    Carpool Driver: {'id': 184, 'arrival': 11, 'departure': 15}
+    Carpool Riders Departure: [{'id': 184, 'arrival': 11, 'departure': 15}, {'id': 197, 'arrival': 11, 'departure': 12}]
+    Carpool Riders Return: [{'id': 184, 'arrival': 11, 'departure': 15}, {'id': 197, 'arrival': 11, 'departure': 12}]
+    
