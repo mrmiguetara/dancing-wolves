@@ -62,15 +62,8 @@ class PARS:
         self.solver = solver
 
     def solve(self) -> None:
-        # if self.solution is not None:
-        #     x_var = list(map(lambda x: self.x[x[0], x[1]], self.x))
-        #     x_val = list(map(lambda x: self.x[x[0], x[1]].solution_value(), self.x))
-        #     self.solver.SetHint(x_var, x_val)
-            
-        #     y_var = list(map(lambda y: self.y[y[0], y[1]], self.y))
-        #     y_val = list(map(lambda y: self.y[y[0], y[1]].solution_value(), self.y))
-        #     self.solver.SetHint(y_var, y_val)
-            
+        if self.solution is not None:
+            self.solver.SetSolverSpecificParametersAsString('use_dual_simplex: true')
         self.solver.Solve()
         self.solution = self.solver.Objective().Value()
 
