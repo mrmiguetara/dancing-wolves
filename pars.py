@@ -11,7 +11,7 @@ class SolutionNotCalculatedError(Exception):
 class PARS:
     def __init__(self) -> None:
         self.solver: pywraplp.Solver = None
-        self.solution = None
+        self.solution: float = None
         self.x: pywraplp.VariableExpr = None
         self.y: pywraplp.VariableExpr = None
 
@@ -71,7 +71,8 @@ class PARS:
         #     y_val = list(map(lambda y: self.y[y[0], y[1]].solution_value(), self.y))
         #     self.solver.SetHint(y_var, y_val)
             
-        self.solution = self.solver.Solve()
+        self.solver.Solve()
+        self.solution = self.solver.Objective().Value()
 
     def add_prohibit_carpool_constraint(self, constraint: CarPool) -> None:
         self.solver.Add(constraint=self.solver.Sum(self.x[constraint.driver['id'], j['id']] for j in constraint.ridersDeparture) <= len(constraint.ridersDeparture)-1)
