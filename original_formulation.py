@@ -67,10 +67,10 @@ def model(c,c_prime, k, r, s, p, I, J, T, parkings):
         print("Model time", end_time - start_time, "seconds")
         for i in range(I):
             for j in range(J):
-                if x[i,j].solution_value() == 1: 
-                    print('x(%d,%d) = %.2f' % (i,j,x[i,j].solution_value()) )
-                if y[i,j].solution_value() == 1: 
-                    print('y(%d,%d) = %.2f' % (i,j,y[i,j].solution_value()) )
+                if x[i,j].solution_value() != 0: 
+                    print('x(%d,%d) = %f' % (i,j,x[i,j].solution_value()) )
+                if y[i,j].solution_value() != 0: 
+                    print('y(%d,%d) = %f' % (i,j,y[i,j].solution_value()) )
                 # print('h(%d,%d) = %.2f' % (i,j,h[i,j].solution_value()) )
                 # print("walltime n milisecs =", solver.WallTime())
     if sol == pywraplp.Solver.INFEASIBLE:

@@ -29,7 +29,7 @@ class PARS:
         self.latest_arrivals = r[:]
         self.earliest_departure = s[:]
 
-        solver = pywraplp.Solver('PARS', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
+        solver = pywraplp.Solver('PARS', pywraplp.Solver.GLOP_LINEAR_PROGRAMMING)
         self.x = {}
         self.y = {}
         for i in range(self.I):
@@ -89,8 +89,8 @@ class PARS:
             raise SolutionNotCalculatedError('Infeasible')
         car_pools = []
         dummy_driver = None
-        x_sol = [[i,j] for i in range(self.I) for j in range(self.J) if self.x[i,j].solution_value() == 1.0]
-        y_sol = [[i,j] for i in range(self.I) for j in range(self.J) if self.y[i,j].solution_value() == 1.0]
+        x_sol = [[i,j] for i in range(self.I) for j in range(self.J) if round(self.x[i,j].solution_value()) == 1.0]
+        y_sol = [[i,j] for i in range(self.I) for j in range(self.J) if round(self.y[i,j].solution_value()) == 1.0]
         
         arrivals = {}
         for x in x_sol:
